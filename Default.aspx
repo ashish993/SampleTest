@@ -9,6 +9,8 @@
 <body>
     <form id="form1" runat="server">
         <h1>Home Page</h1>
+        <br>
+        <h2>Check DB Connection <a href="http://devopsdemowebapp001.azurewebsites.net/test.aspx">CLICK HERE</a>
     </form>
 </body>
 </html>
