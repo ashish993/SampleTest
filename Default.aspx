@@ -9,19 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <h3>GridView Example</h3>
-
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1">
-                <Columns>
-                    <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id"></asp:BoundField>
-                    <asp:BoundField DataField="name" HeaderText="name" SortExpression="name"></asp:BoundField>
-                    <asp:BoundField DataField="age" HeaderText="age" SortExpression="age"></asp:BoundField>
-                </Columns>
-            </asp:GridView>
-
-            <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:DevOpsdemoConnectionString %>' SelectCommand="SELECT * FROM [devops]"></asp:SqlDataSource>
-           
-      
+            <h1>Home Page </h1>
         </div>
     </form>
 </body>
