@@ -4,28 +4,26 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html  >
   <head id="Head1" runat="server">
-    <title>GridView Example</title>
+    <title>Example</title>
 </head>
 <body>
     <form id="form1" runat="server">
 
       <h3>GridView Example</h3>
 
-      <asp:gridview id="CustomersGridView" 
+      <asp:gridview id="DemoGridView" 
         datasourceid="CustomersSource" 
         autogeneratecolumns="False"
         emptydatatext="No data available." 
         allowpaging="True" 
-        runat="server" DataKeyNames="CustomerID">
+        runat="server" DataKeyNames="id">
           <Columns>
-              <asp:BoundField DataField="CustomerID" HeaderText="CustomerID" 
-                  InsertVisible="False" ReadOnly="True" SortExpression="CustomerID" />
-              <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" 
-                  SortExpression="CompanyName" />
-              <asp:BoundField DataField="FirstName" HeaderText="FirstName" 
-                  SortExpression="FirstName" />
-              <asp:BoundField DataField="LastName" HeaderText="LastName" 
-                  SortExpression="LastName" />
+              <asp:BoundField DataField="id" HeaderText="id" 
+                  InsertVisible="False" ReadOnly="True" SortExpression="id" />
+              <asp:BoundField DataField="name" HeaderText="Name" 
+                  SortExpression="name" />
+              <asp:BoundField DataField="age" HeaderText="Age" 
+                  SortExpression="age" />
           </Columns>
       </asp:gridview>
 
@@ -34,7 +32,7 @@
       <!-- expression to retrieve the connection string value   -->
       <!-- from the Web.config file.                            -->
       <asp:sqldatasource id="CustomersSource"
-        selectcommand="SELECT CustomerID, CompanyName, FirstName, LastName FROM SalesLT.Customer"
+        selectcommand="SELECT * FROM devopsdemo"
         connectionstring="<%$ ConnectionStrings:AWLTConnectionString %>" 
         runat="server"/>
 
