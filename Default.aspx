@@ -8,9 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h1>Home Page </h1>
-        </div>
+        <h1>Home Page</h1>
     </form>
 </body>
 </html>
