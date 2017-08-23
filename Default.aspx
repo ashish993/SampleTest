@@ -11,30 +11,17 @@
         <div>
             <h3>GridView Example</h3>
 
-      <asp:gridview id="DemoGridView" 
-        datasourceid="CustomersSource" 
-        autogeneratecolumns="False"
-        emptydatatext="No data available." 
-        allowpaging="True" 
-        runat="server" DataKeyNames="id">
-          <Columns>
-              <asp:BoundField DataField="id" HeaderText="id" 
-                  InsertVisible="False" ReadOnly="True" SortExpression="id" />
-              <asp:BoundField DataField="name" HeaderText="Name" 
-                  SortExpression="name" />
-              <asp:BoundField DataField="age" HeaderText="Age" 
-                  SortExpression="age" />
-          </Columns>
-      </asp:gridview>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1">
+                <Columns>
+                    <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id"></asp:BoundField>
+                    <asp:BoundField DataField="name" HeaderText="name" SortExpression="name"></asp:BoundField>
+                    <asp:BoundField DataField="age" HeaderText="age" SortExpression="age"></asp:BoundField>
+                </Columns>
+            </asp:GridView>
 
-      <!-- This example uses Microsoft SQL Server and connects  -->
-      <!-- to the Northwind sample database. Use an ASP.NET     -->
-      <!-- expression to retrieve the connection string value   -->
-      <!-- from the Web.config file.                            -->
-      <asp:sqldatasource id="CustomersSource"
-        selectcommand="SELECT * FROM devopsdemo"
-        connectionstring="<%$ ConnectionStrings:AWLTConnectionString %>" 
-        runat="server"/>
+            <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:DevOpsdemoConnectionString %>' SelectCommand="SELECT * FROM [devops]"></asp:SqlDataSource>
+           
+      
         </div>
     </form>
 </body>
