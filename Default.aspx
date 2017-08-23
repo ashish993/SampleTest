@@ -1,15 +1,15 @@
-<%@ Page language="C#" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html  >
-  <head id="Head1" runat="server">
-    <title>Example</title>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-
-      <h3>GridView Example</h3>
+        <div>
+            <h3>GridView Example</h3>
 
       <asp:gridview id="DemoGridView" 
         datasourceid="CustomersSource" 
@@ -35,7 +35,7 @@
         selectcommand="SELECT * FROM devopsdemo"
         connectionstring="<%$ ConnectionStrings:AWLTConnectionString %>" 
         runat="server"/>
-
+        </div>
     </form>
-  </body>
+</body>
 </html>
